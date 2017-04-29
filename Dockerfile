@@ -8,6 +8,8 @@ RUN yum clean all && \
 
 COPY run-mountd.sh /
 RUN chmod 777 /run-mountd.sh
-EXPOSE 111/udp 2049/tcp
+
+EXPOSE 111/udp
+EXPOSE 2049
 
 ENTRYPOINT ["/run-mountd.sh"]
